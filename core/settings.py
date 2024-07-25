@@ -62,6 +62,7 @@ THIRD_APPS = [
 ]
 
 PROJECT_APPS = [
+    'apps.contas',
     'apps.base',
     'apps.pages',
 ]
@@ -78,6 +79,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 	'requestlogs.middleware.RequestLogsMiddleware',
 ]
+AUTH_USER_MODEL = "contas.MyUser"
 
 ROOT_URLCONF = "core.urls"
 
