@@ -78,6 +78,8 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 	'requestlogs.middleware.RequestLogsMiddleware',
+    'django_session_timeout.middleware.SessionTimeoutMiddleware',
+	
 ]
 AUTH_USER_MODEL = "contas.MyUser"
 
@@ -163,6 +165,21 @@ REQUESTLOGS = {
     'SECRETS': ['password', 'token'],
     'METHODS': ('PUT', 'PATCH', 'POST', 'DELETE'),
 }
+
+
+
+# timeout tempo de inatividate no sistema
+SESSION_EXPIRE_SECONDS = 1800
+SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
+#SESSION_EXPIRE_AFTER_LAST_ACTIVITY_GRACE_PERIOD = 60  
+SESSION_TIMEOUT_REDIRECT = 'http://localhost:8000/contas/timeout/'
+
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+
 
 # Internationalization
 # Se quiser deixar em PT BR
