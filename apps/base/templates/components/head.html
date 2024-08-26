@@ -1,0 +1,23 @@
+
+
+{% load static %}
+<!-- usado para fornecer palavras-chave relevantes para o conteúdo do site que podem ser usadas pelos mecanismos de pesquisa. -->
+<meta charset="UTF-8">
+<!-- usado para especificar o nome do autor do site. -->
+<meta name="robots" content="noindex, nofollow">
+<!-- usado para instruir os mecanismos de pesquisa a não indexar ou seguir as páginas do site. -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+{% block meta_description_keyword %}
+    <meta name="description" content="{{ seo.meta_description }}" />
+    <meta name="keywords" content="{{ seo.meta_keywords }}"/>
+    <meta name="author" content="Nome do autor"> 
+{% endblock %}
+<title>{% block title %}{% endblock %}</title>
+<!-- CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">	
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+{% comment %} ANUNCIOS SE QUISER {% endcomment %}
+{% for header_script in header_scripts %}
+	 {{ header_script.script|safe }}
+{% endfor %}

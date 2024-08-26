@@ -8,6 +8,11 @@
         <p>Configurações do aplicativo contas</p>
         <ul>
             <li><a href="{% url 'password_change' %}">Alterar minha senha</a></li>
+            {% if perms.contas.view_myuser %}
+            <button type="button" class="btn btn-light" onclick="location.href='{% url 'lista_usuarios' %}'">
+                            <i class="fas fa-users me-2"></i>Usuários do Sistema</button>
+            {% endif %}
+            
         </ul>
     </div>
 

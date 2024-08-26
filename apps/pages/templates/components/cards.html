@@ -1,0 +1,63 @@
+{% load static %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+{% if bloco.bloco.nome == 'CARDS' %}
+<section>
+    <div class="container py-lg-3" style="margin-top: -50px;"> <!-- Ajuste o valor negativo para mover o card mais para cima -->
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-12">
+                <h2 class="custom-font2">{{bloco.titulo}}</h2>
+                <p class="custom-font">{{bloco.descricao|default:""}}</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            {% for servico in bloco.conteudo.all %} 
+            <div class="col-md-6 d-flex align-self-stretch">
+                <div class="d-flex gap-4">
+                    <div class="rounded text-white p-5" style="background-color: {{servico.cor_label}}">
+                        <i class="{{servico.icone}}"></i>
+                    </div>
+                    <div class="media-body pl-md-4">
+                        <h3 class="text-dark text-decoration-none mb-3 custom-font">{{servico.titulo_1}}</h3>
+                        <p class="custom-font">{{servico.descricao_1}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+                
+        </div>
+    </div>
+</section>
+{% endif %}
+
+
+{% if bloco.bloco.nome == 'CARDS_2' %}
+<section>
+    <div class="container text-center py-lg-5">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-12" data-aos="fade-left" data-aos-offset="-500">
+                <h2 class="titulo-customizado">{{bloco.titulo}}</h2>
+            </div>
+        </div>
+        <div class="row gap-3">
+            {% for especialidade in bloco.conteudo.all %} 
+            <div class="col p-4 bg-light rounded-5" data-aos="fade-up" data-aos-offset="-300">
+                <img src="{{especialidade.imagem.url}}" class="rounded-circle object-fit-cover" width="150" height="150" alt="">
+                <h3><a class="link-dark text-decoration-none subtitulo-customizado" href="#">{{especialidade.titulo_1}}</a></h3>
+                {% comment %} <p>{{especialidade.descricao_1}}</p> {% endcomment %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+            duration: 1900, // duração da animação em milissegundos
+            offset: 100, // distância do topo da viewport antes de começar a animação
+        });
+    });
+</script>

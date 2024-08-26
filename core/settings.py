@@ -67,6 +67,8 @@ PROJECT_APPS = [
     'apps.config',
     'apps.perfil', # adicionar	
     'apps.pages',
+    'apps.forum', # Adiciona    
+
 	
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_APPS + PROJECT_APPS
@@ -100,7 +102,18 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 # Apps
-                'base.context_processors.context_social', 				
+                'base.context_processors.context_social', 
+                'base.context_processors.get_logo', 
+                'base.context_processors.get_seo', 
+                'base.context_processors.get_ga_code', 
+                'base.context_processors.get_scripts', 
+
+
+
+				
+
+
+								
             ],
         },
     },

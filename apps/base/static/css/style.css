@@ -1,4 +1,5 @@
 @import url('global.css');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
 
 .sidebar {
     position: fixed;
@@ -21,6 +22,14 @@
     border: none;
 }
 
+
+.banner {
+    padding: 8em 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
 @media (min-width: 968px) {
     .bloco {
         padding-left: 250px;
@@ -44,3 +53,187 @@
         display: none;
     }
 }
+
+.img{
+
+margin-left: 200px;
+}
+.custom-navbar {
+    background-color: #14496a; /* azul escuro */
+}
+.custom-container {
+    margin-left: -50px; /* Ajuste o valor conforme necessário */
+}
+.banner {
+    padding: 8em 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+/* custom.css */
+.carousel-caption .text-primary {
+    color:white; /* Cor para slide.descricao_2 */
+}
+
+.carousel-caption h1 {
+    color:white; /* Cor para slide.descricao_2 */
+}
+
+.carousel-caption p.mb-4 {
+    color:white; /* Cor para slide.descricao_2 */
+}
+
+.carousel-caption p:not(.mb-4) {
+    color:white; /* Cor para slide.descricao_2 */
+}
+.btn-primary py-3 px-4{
+
+    margin: auto;
+}
+
+.custom-button {
+    margin-left: -100px;
+    padding: 0.5rem 1rem; /* Reduz a altura do botão */
+    font-size: 1rem; /* Ajuste o tamanho da fonte, se necessário */
+    line-height: 03; /* Controla o espaçamento vertical interno */
+}
+html {
+    zoom: 0.75; /* Ajusta a escala da página para 75% */
+  }
+
+  .banner2 {
+    background-image: url('{{banner_2.imagem.url}}');
+    height: 500px; /* Ajuste este valor conforme necessário */
+    background-size: cover;
+    background-position: center;
+}
+
+
+.banner1 {
+background-image: url('{{banner_2.imagem.url}}');
+height: 500px; /* Ajuste este valor conforme necessário */
+background-size: cover;
+background-position: center;
+}
+
+/* Altere a fonte para a barra de navegação */
+.navbar-nav .nav-link, 
+.navbar-brand {
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-size: 18px; /* Ajuste o tamanho da fonte, se necessário */
+    font-weight: 500; /* Ajuste o peso da fonte, se necessário */
+}
+
+
+.banner8 {
+    background-size: cover; /* Garante que a imagem de fundo cubra todo o banner */
+    background-position: center; /* Centraliza a imagem de fundo */
+}
+
+
+
+.banner8 {
+    height: 280vh;
+    background-size: 80% auto; /* 50% da largura da imagem, altura automática */
+    background-position: center;
+    margin-top: -10px;
+    background-size: cover; /* Garante que a imagem de fundo cubra todo o banner */
+    background-position: center; /* Centraliza a imagem de fundo */
+}
+@media (max-width: 768px) {
+    .banner8 {
+        height: 300px; /* Altura reduzida para dispositivos móveis */
+    }
+}
+
+/* Exemplo de CSS externo */
+.custom-font {
+    font-family:'Poppins', sans-serif;
+    font-size: 18px;
+}
+/* Exemplo de CSS externo */
+.custom-font2 {
+    font-family:'Poppins', sans-serif;
+    font-size: 26px;
+
+}
+
+
+.custom-font-banner {
+    font-family:'Poppins', sans-serif;
+    font-size: 18px;
+
+}
+.titulo-customizado {
+    font-family:'Poppins', sans-serif;
+    font-weight: normal; /* Isso garante que o título não fique em negrito */
+    font-size: 32px;
+}
+
+.subtitulo-customizado {
+    font-family:'Poppins', sans-serif;
+    font-size: 22px;
+}
+/* banner compartilhe suas ideias */
+.font-banner-customizado { 
+    font-family:'Poppins', sans-serif;
+    font-weight: normal; /* Ajuste o peso da fonte conforme necessário */
+    font-size: 22px;
+
+}
+
+
+.font-banner4-customizado {
+    font-family:'Poppins', sans-serif;
+    font-weight: normal; /* Ajuste o peso da fonte conforme necessário */
+}
+
+
+.navbar .nav-link {
+    color: white; /* Cor do texto dos links */
+}
+
+.navbar .nav-link:hover {
+    color: #82c712; /* Cor do link ao passar o mouse */
+    
+    transition: font-size 0.3s ease; /* Adiciona uma transição suave */    
+}
+/* Em seu arquivo CSS */
+
+
+.developer a {
+    color: black;         /* Define a cor do link como preta */
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    text-decoration: none; /* Remove o sublinhado do link, se desejar */
+}
+
+.developer a:hover {
+    color: #0a0a0a;                 /* Muda a cor do texto para dourado */
+    transition: all 0.3s ease-in-out; /* Suave transição para todos os efeitos */
+    transform: scale(1.1);          /* Leve aumento de escala para destacar o link */
+}
+
+
+
+.text-end a {
+    color: black;         /* Define a cor do link como preta */
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none; /* Remove o sublinhado do link, se desejar */
+}
+
+.flex-column{
+    color: black;         /* Define a cor do link como preta */
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none; /* Remove o sublinhado do link, se desejar */
+    font-size: 18px;
+
+}
+
+
+.flex-column:hover {
+    font-size: 20px;       /* Aumenta o tamanho da fonte ao passar o mouse */
+    transition: font-size 0.3s ease; /* Adiciona uma transição suave */
+}
+
