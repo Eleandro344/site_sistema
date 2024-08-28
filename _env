@@ -4,11 +4,15 @@ DEBUG=True
 SUPER_USER=ADMIN
 EMAIL=leticiateste@gmail.com
 
-NAME_DB=db.sqlite3
-USER_DB=root
-PASSWORD_DB=
-HOST_DB=localhost
-PORT_DB=3306
+
+ALLOWED_HOSTS=localhost,127.0.0.1,
+
+DB_ENGINE=django.db.backends.postgresql_psycopg2
+DB_NAME='nome_do_seu_banco'
+DB_USER='nome_do_seu_usuario'
+DB_PASSWORD='sua_senha'
+DB_HOST='localhost'
+DB_PORT='5432'
 
 EMAIL_HOST=smtp.office365.com
 EMAIL_HOST_USER=email@hotmail.com

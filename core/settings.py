@@ -22,10 +22,14 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = [ 
-		'localhost', 
-		'127.0.0.1',  
-]
+ALLOWED_HOSTS = []
+ALLOWED_HOSTS.extend(
+    filter(
+        None,
+        os.environ.get('ALLOWED_HOSTS', '').split(','),
+    )
+)
+
 CORS_ALLOW_HEADERS = list(default_headers) + [
     	'X-Register',
 ]
@@ -125,15 +129,14 @@ WSGI_APPLICATION = "core.wsgi.application"
 
 # Banco de Dados.
 DATABASES = {
-  'default': {
-      'ENGINE': 'django.db.backends.sqlite3',
-      'NAME': os.path.join(BASE_DIR, os.getenv('NAME_DB')),
-			#'USER':os.getenv('USER_DB')
-			#'PASSWORD': os.getenv('PASSWORD_DB')
-			#'HOST':os.getenv('HOST_DB')
-			#'PORT':os.getenv('PORT_DB')
-
-	}
+    'default': {
+        'ENGINE': os.getenv('DB_ENGINE'),
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
+    }
 }
 
 
