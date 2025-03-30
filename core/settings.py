@@ -234,14 +234,18 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # Se tiver configuração de email
-EMAIL_HOST = os.getenv('EMAIL_HOST')
-EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD') 
-EMAIL_PORT = os.getenv('EMAIL_PORT') 
-EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS') 
-DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
-SERVER_EMAIL = DEFAULT_FROM_EMAIL
-# --- Messages --- #
+DATABASES = {
+  'default': {
+      'ENGINE': 'django.db.backends.sqlite3',
+      'NAME': os.path.join(BASE_DIR, os.getenv('NAME_DB')),
+			#'USER':os.getenv('USER_DB')
+			#'PASSWORD': os.getenv('PASSWORD_DB')
+			#'HOST':os.getenv('HOST_DB')
+			#'PORT':os.getenv('PORT_DB')
+
+	}
+}
+
 from django.contrib.messages import constants
 
 MESSAGE_TAGS = {
